@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { capitalizeString } from '../helpers/capitalize';
 
 /**
  * Se recibe una FUNCIÓN en los props
@@ -15,7 +16,7 @@ export const AddCategory = ({ setCategories }) => {
      * Evento change para capturar el valor del input
      */
     const handleInputChange = (e) => {
-        setInputValue(e.target.value);
+        setInputValue(capitalizeString(e.target.value));
     }
 
     /**
